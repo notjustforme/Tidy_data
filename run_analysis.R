@@ -89,4 +89,4 @@ data_tidy<-data_melt[,c(-2,-4),with=FALSE]
 setkey(data_tidy,subject,activityname,featJerk,featMag,featDomain,featinstrument,featvariable,featacceleration,axis)
 
 ###write data_tidy
-write.table(data_tidy,file="data_tidy.txt")
+write.table(data_tidy,file="DATA_TIDY.txt",row.names = FALSE)
