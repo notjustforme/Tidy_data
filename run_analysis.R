@@ -1,4 +1,8 @@
 ###merge data
+#library packages
+library(dplyr)
+library(data.table)
+
 #read data(test&train)
 traindata<-read.table("./UCI HAR Dataset/UCI HAR Dataset/train/X_train.txt")
 trainactivity<-read.table("./UCI HAR Dataset/UCI HAR Dataset/train/y_train.txt")
@@ -87,6 +91,7 @@ data_melt$axis<-factor(temp4 %*% temp3,labels=c(NA,"X","Y","Z"))
 ###create tidy data
 data_tidy<-data_melt[,c(-2,-4),with=FALSE]
 setkey(data_tidy,subject,activityname,featJerk,featMag,featDomain,featinstrument,featvariable,featacceleration,axis)
+datatest<-aggregate(value~subject+activityname+featJerk+featMag+featDomain+featinstrument+featvariable+featacceleration+axis,data_tidy,FUN=mean)
 
 ###write data_tidy
-write.table(data_tidy,file="DATA_TIDY.txt",row.names = FALSE)
+write.table(datatest,file="DATA_TIDY_RESULT.txt",row.names = FALSE,col.names = TRUE)

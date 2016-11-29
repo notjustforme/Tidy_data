@@ -5,8 +5,6 @@ subject:ID the subject who performed the activity for each window sample. Its ra
 
 activityname:Activity name
 
-value:The value of observation.
-
 featJerk:Jerk signal
 
 featMag:Magnitude signal
@@ -20,3 +18,5 @@ featvariable:Variable
 featacceleration:Acceleration signal
 
 axis:3-axial signals in the X, Y and Z directions
+
+mean:The mean of observation.
