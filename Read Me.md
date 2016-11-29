@@ -1,7 +1,7 @@
 Project for Getting and tidying data
 =================================================
 Author:Notjustforme
-URL:https://github.com/notjustforme/tidy-data
+URL:https://github.com/notjustforme/Tidy_data
 
 =================================================
         
